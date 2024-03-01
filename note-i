@@ -1,0 +1,23 @@
+
+.play-btn, .app-btn{
+
+  transition: background-color 0.3s, box-shadow 0.3s; /* Add transition for smooth effects */
+
+}
+
+
+/* Add hover effect */
+.play-btn:hover, .app-btn:hover {
+  background-color: green;
+}
+
+/* Add click effect */
+.play-btn:active, .app-btn:active {
+  background-color: #0b8023; /* Darker green when clicked */
+}
+
+/* Add flashy effect on hover */
+.play-btn:hover, .app-btn:hover {
+  animation: flashy 0.5s infinite alternate; /* Apply the flashy animation */
+}
+
