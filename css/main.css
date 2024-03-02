@@ -123,6 +123,104 @@ transition: 1s;
   margin-right: 20px; 
   /* Add border-radius for rounded corners */
   border-radius: 25px; 
+  cursor: pointer;
 }
 
 
+/* add hover setting btn and I am really tired :(- change color and background color*/
+.play-btn:hover, .app-btn:hover{
+  border: 1px solid greenyellow;
+  background: greenyellow;
+  transition: 0.5s;
+  color: black;
+  font-weight: bold;
+}
+
+/* hidden icons for larg screens */
+nav .fa{
+  display: none;
+}
+
+
+
+/* set for media for less 700px*/
+  /*1- font title -2- set nav list*/
+
+@media(max-width: 700px){
+   /* Override hover::after and ::after styles */
+   .nav-pages ul li::after {
+    width: 0;
+  }
+  
+  .bannertext h1{font-size: 20px}
+  .nav-pages ul li{display: block}
+  
+  /* add icons */
+  nav .fa{
+    display: block;
+    font-size: 20px;
+    color: greenyellow;
+    cursor: pointer;
+    /* add space between icon and secret page */
+    margin: 15px;
+
+  }
+
+  /*3- add secrect page inside */
+  .nav-pages{
+    background: gold;
+    width: 200px;
+    height: 100vh;
+    top:0;
+    /* hiding secret page */
+    right: -200px;
+    text-align: left;
+    position: absolute;
+    /* get rid of worlds that overlay */
+    z-index: 2;
+  }
+
+  /* add space betwen nav list and secret page*/
+  .nav-pages ul{
+    padding: 15px;
+  }
+
+  /* add transition for hell burger */
+  .nav-pages{
+    transition: 2s;
+  }
+
+  /* change fonts color */
+  .nav-pages ul li a{
+    color: black;
+  }
+  
+ /* Override hover::after and ::after styles */
+ /* .nav-pages ul li::after {
+  width: 0;
+} */
+/* add transition */
+.nav-pages ul li::after{
+  transition: 0s;
+  }
+  
+  /* makign beautiful hover  */
+  .nav-pages ul li:hover::after{
+   width: 0%; 
+  }
+  
+  /* Adjust positioning of buttons */
+  .play-btn,
+  .app-btn {
+    display: block; /* Display as block for vertical stacking */
+    margin-top: 20px; /* Add space between buttons */
+    margin-right: auto; /* Center horizontally */
+  margin-left: auto; /* Center horizontally */
+  width: 120px; /* Adjust the width as needed */
+}
+    width: 120px; /* Adjust the width as needed */
+
+    
+  }
+  
+}

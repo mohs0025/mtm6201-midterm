@@ -11,11 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<!-- setting icons -->
+<link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css>
     
-
-
-
-
 
 </head>
 
@@ -29,8 +27,10 @@
         <nav>
             <!-- add logo -->
             <a href="index.html"><img src="images/arm.png" alt=""></a>
-            <!-- add nav pages -->
-            <div class="nav-pages">
+            <!-- add nav pages - I add id for script section -->
+            <div class="nav-pages" id="navpages">
+                <!-- closing icon, make it disappear -->
+                <i class="fa fa-window-close" onclick="SecretPage()"></i>
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="">PRODUCTS</a></li>
@@ -38,6 +38,9 @@
                     <li><a href="">CONTACT</a></li>
                 </ul>
             </div>
+            <!-- add bars icon -->
+            <i class="fa fa-bars" onclick="OpenSecret()"></i>
+
         </nav>
 
 
@@ -54,14 +57,26 @@
 
         </dive>
 
-        
-
-
 
 
 
 
     </section>
+
+
+
+<!-- add javascp for that Hell's burger icon :( -->
+    <!-- why it is that hard? I prefer to eat hamburger instead of creating it  -->
+    <script>
+        var navpages = document.getElementById("navpages");
+        function OpenSecret(){
+            navpages.style.right = "0";
+        }
+
+        function SecretPage(){
+            navpages.style.right = "-200px";
+        }
+    </script>
 
 
    
