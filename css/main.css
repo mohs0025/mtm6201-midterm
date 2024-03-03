@@ -7,6 +7,7 @@
 
   /* add font from google.font.com */
   font-family: "Merriweather", serif;
+  
 
 }
 
@@ -225,11 +226,125 @@ nav .fa{
     margin-top: 20px; /* Add space between buttons */
     margin-right: auto; /* Center horizontally */
   margin-left: auto; /* Center horizontally */
-  width: 120px; /* Adjust the width as needed */
-}
-    width: 120px; /* Adjust the width as needed */
-
-    
+  width: 120px; /* Adjust the width as needed */  
   }
   
 }
+
+
+/* write code for container - images and texts */
+/* .container {
+  margin: 5rem auto;
+  width: min(90%, 75rem);
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1em;
+
+} */
+
+.row{
+  width: 80%;
+  max-width: 1170px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  /* add space */
+  grid-gap: 50px;
+  overflow-x: hidden;
+  padding: 5rem 0;
+  margin: 0 auto;
+}
+
+.row .imageWrapper{
+  overflow: hidden;
+}
+
+/* change scale of picture by hovering */
+.row .imageWrapper img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.row .imageWrapper:hover img{
+  transform: scale(1.25);
+}
+
+
+/* style the content wrapper */
+. row .contentWrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+/* .row .contentWrapper span.textWrapper{ */
+  /* display: block; */
+  /* font-size: 20px; */
+  /* height: 5rem; */
+  /* display: flex; */
+  /* justify-content: flex-start; */
+  /* align-items: center; */
+  /* gap: 15px;
+  margin-bottom: 20px; */
+/* 
+} */
+
+/* .row .contentWrapper span.textWrapper span{
+  display: inline-block;
+  background: gray;
+  width: 70px;
+  height: 5px;
+} */
+
+/* stylign the content wrappers */
+.row .contentWrapper h2{
+  font-size: 40px;
+  font-weight: 700px;
+  color: rgb(97, 95, 95);
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.row .contentWrapper p{
+  font-size: 18px;
+  line-height: 30px;
+  padding-bottom: 25px;
+}
+
+.row .contentWrapper a{
+  font-display: inline-blok;
+  text-decoration: none;
+  /* make it capital */
+  text-transform: uppercase;
+  background: gold;
+  color: black;
+  /* chang size */
+  padding: 15px;
+  /* letter-spacing: 1px; */
+  user-select: none;
+  
+}
+
+
+/* set for media for less 700px*/
+
+  @media(max-width: 700px){
+    .row{
+      grid-template-columns: 1fr;
+      /* grid-gap: 50px; */
+      width: 90%;
+      margin: 0 auto;
+
+    }
+      /* style the content wrapper */
+. row .contentWrapper{
+  padding-left: 8px;
+}
+  }
+
+
+
+
