@@ -232,18 +232,11 @@ nav .fa{
 }
 
 
-/* write code for container - images and texts */
-/* .container {
-  margin: 5rem auto;
-  width: min(90%, 75rem);
-  display: grid;
-  grid-auto-flow: column;
-  gap: 1em;
-
-} */
+/* ------------------------------------------ */
+/* <!-- products part --> */
 
 .row{
-  width: 80%;
+  width: 90%;
   max-width: 1170px;
   display: grid;
   place-items: center;
@@ -339,10 +332,27 @@ nav .fa{
       margin: 0 auto;
 
     }
-      /* style the content wrapper */
-. row .contentWrapper{
-  padding-left: 8px;
-}
+    
+    /* style the content wrapper */
+    . row .contentWrapper{
+      padding-left: 8px;
+      flex-flow: row wrap;
+    }
+
+    /* make image becom first */
+    .row .imageWrapper img{
+      display: block;
+      order: 1;
+      width: 100%;
+      /* height: 250px; */
+    }
+
+    .row .contentWrapper {
+      display: block;
+      order: 2;
+    }
+
+
   }
 
 
