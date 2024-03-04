@@ -115,7 +115,8 @@ transition: 1s;
 }
 
 /* work on btn=size, box, corner, color, transparent */
-.play-btn, .app-btn{
+/* add call-btn */
+.play-btn, .app-btn, .call-btn{
   display: inline-block;
   text-decoration: none;
   border: 1px solid white;
@@ -132,7 +133,8 @@ transition: 1s;
 
 
 /* add hover setting btn and I am really tired :(- change color and background color*/
-.play-btn:hover, .app-btn:hover{
+/* add call-btn */
+.play-btn:hover, .app-btn:hover, .call-btn:hover{
   border: 1px solid gold;
   background: gold;
   transition: 0.5s;
@@ -354,9 +356,42 @@ nav .fa{
       display: block;
       order: 2;
     }
-
-
   }
+
+
+/* Call Us-Advertisment part in home page*/
+.call{
+  margin: 50px auto;
+  width: 100%;
+  /* background-image: linear-gradient( rgba(93, 93, 93, 0.7), rgba(243, 180, 7, 0.7)),
+  url(../images/banner-small.jpg); */
+  
+  background-position: center;
+  background-size: cover;
+  /* border-radius: 10px; */
+  text-align: center;
+  padding: 100px 0;
+  
+
+  background-image: linear-gradient(rgba(1, 3, 14, 0.7), rgba(17, 23, 52, 0.7)), url(../images/banner-small.jpg);
+}
+
+.call h1{
+  color: white;
+  /* add space with btn */
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+/* add margin from left and right for advertisment */
+.call h1,
+.call p{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
+
 /* ---------------------------------------------------------- */
   /* Remove background image for about and contact pages and design it again */
   .header.others {
