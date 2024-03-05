@@ -246,14 +246,9 @@ nav .fa{
 /* ---------------------------------------------- */
 /* CSS for positioning the overlay image */
 
-/* ---------------------------------------------------------- */
 
-/* add footer part */
-/* .footer{
-  width: 100%;
-  text-align: center;
-  padding: 25px 25px;
-} */
+
+
 
 
 .footer {
@@ -325,9 +320,73 @@ nav .fa{
 
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -------------------------------------- */
+/* one-image in middle */
+.one-center {
+  text-align: center; /* Center the content inside the div */
+  /* margin: 0 2%; */
+  position: relative;
+  top:-100px;
+  
+  /* background-color: blueviolet; */
+  /* text-align: left; */
+  /* box-shadow: 1px 1 px 20px 1px red; */
+}
+
+
+/* set the size of middle image */
+.one-center img{
+  width: 60%;
+}
+
+/* small screens-middle image */
+@media (max-width: 700px) {
+  .one-center {
+    position: static; /* Reset position to default */
+    margin-top: 50px; /* Add margin before the image */
+    margin-bottom: 50px; /* Add margin after the image */
+    top: 0; /* Ensure top position is 0 */
+  }
+
+  /* set the size of middle image */
+.one-center img{
+  width: 60%;
+}
+}
+
+
+/* set black line */
+.line {
+  height: 2px; /* Height of the line */
+  background-color: black; /* Color of the line */
+  margin-top: 20px; /* Adjust margin as needed */
+  width: 50%; /* Half width of the screen */
+  margin: 20px auto; /* Center the line horizontally */
+}
+
+/* small screens, full width */
+@media (max-width: 700px) {
+  .line {
+    width: 100%; /* Full width of the screen */
+  }
+}
 
 /* ------------------------------------------ */
 /* <!-- products part --> */
+ h1{
+  font-size: 40px;
+  font-weight: 700px;
+  color: rgb(97, 95, 95);
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
 
 .row{
   width: 90%;
