@@ -245,19 +245,7 @@ nav .fa{
 
 /* ---------------------------------------------- */
 /* CSS for positioning the overlay image */
-.overlay-image {
-  position: absolute;
-  bottom: 20;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1; /* Ensure the image is above other content */
-}
 
-/* Adjust the size of the overlay image */
-.overlay-image img {
-  width: 33.33vw; /* Set the width to one-third of the viewport width */
-  height: auto; /* Maintain aspect ratio */
-}
 /* ---------------------------------------------------------- */
 
 /* add footer part */
