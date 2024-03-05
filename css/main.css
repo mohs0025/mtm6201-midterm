@@ -33,7 +33,8 @@ nav{
 }
 
 /* fix logo size */
-nav img{
+/* add footer image */
+nav img, .footer img{
   width: 85px;
 }
 
@@ -119,7 +120,7 @@ transition: 1s;
 .play-btn, .app-btn, .call-btn{
   display: inline-block;
   text-decoration: none;
-  border: 1px solid white;
+  border: 1px solid gold;
   padding: 12px 45px;
   font-size: 16px;
   background: transparent;
@@ -154,10 +155,10 @@ nav .fa{
 
 @media(max-width: 700px){
   /* fix logo size */
-  nav img{
+  /* add footer image too */
+  nav img, .footer img{
     width: 65px;
   }
-
 
 
    /* Override hover::after and ::after styles */
@@ -224,16 +225,116 @@ nav .fa{
    width: 0%; 
   }
   
-  /* Adjust positioning of buttons */
+  /* adjust positioning of buttons */
+  /* add advertisment btn too */
+
   .play-btn,
-  .app-btn {
-    display: block; /* Display as block for vertical stacking */
-    margin-top: 20px; /* Add space between buttons */
-    margin-right: auto; /* Center horizontally */
-  margin-left: auto; /* Center horizontally */
-  width: 120px; /* Adjust the width as needed */  
+  .app-btn, .call-btn {
+    /* for vertical stacking */
+    display: block; 
+    /*space between buttons */
+    margin-top: 20px;
+    /*center horizontally */
+    margin-right: auto;
+    /* center horizontally */
+    margin-left: auto;
+    /*adjust the width as needed */
+    width: 120px;  
+  }  
+}
+
+/* ---------------------------------------------- */
+/* CSS for positioning the overlay image */
+.overlay-image {
+  position: absolute;
+  bottom: 20;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Ensure the image is above other content */
+}
+
+/* Adjust the size of the overlay image */
+.overlay-image img {
+  width: 33.33vw; /* Set the width to one-third of the viewport width */
+  height: auto; /* Maintain aspect ratio */
+}
+/* ---------------------------------------------------------- */
+
+/* add footer part */
+/* .footer{
+  width: 100%;
+  text-align: center;
+  padding: 25px 25px;
+} */
+
+
+.footer {
+  padding: 0px 25px;
+  /* put everything in one line */
+  display: flex;
+  /* align items horizentaly */
+  justify-content: space-between;
+  /* align items vertically */
+  align-items: center; 
+}
+
+/* fix logo width */
+.footer img {
+  width: 60px; 
+  /* space between logo and h4 */
+  margin-right: 10px; 
+
+}
+
+.footer .icons {
+  font-size: larger;
+  /*icons will grow and take available space */
+  flex-grow: 1; 
+  /* align icons in center */
+  text-align: center; 
+}
+
+.footer .icons i {
+  /* space between icons */
+  margin-right: 10px; 
+}
+
+
+.footer .text {
+  /* set text to the right */
+  text-align: right; 
+}
+
+.logo-and-title {
+  /* logo and h4 in a row */
+  display: flex; 
+ /* items in a line */
+  align-items: center;
+}
+
+
+/* add bottom margin */
+.footer{
+  margin-bottom: 25px; 
+}
+
+
+/* set for media for less 700px*/
+@media(max-width: 700px){
+  .footer{
+    /* display: block; */
+    flex-direction: column;
+    line-height: 1.5;
+    align-items: center;
+    justify-content: center;
   }
-  
+
+   /* hide the logo and h4 */
+  .footer img,
+  .footer h4 {
+    display: none;
+  }
+
 }
 
 
@@ -327,7 +428,7 @@ nav .fa{
 }
 
 
-/* set for media for less 700px*/
+/* set advertisment for media for less 700px-@media*/
 
   @media(max-width: 700px){
     .row{
@@ -433,14 +534,19 @@ form button[type="submit"] {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%; /* Adjust the width as needed */
-    max-width: 600px; /* Limit the maximum width of the forms */
+    /* adjust the width*/
+    width: 80%; 
+    /* limit the maximum width of the forms */
+    max-width: 600px; 
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background */
+    /* add a semi-transparent background */
+    /* background-color: rgba(255, 255, 255, 0.8);  */
     border-radius: 10px; /* Add some border radius for rounded corners */
+    color: white;
+    
   }
 
-  /* Adjust the position of the submit button if needed */
+  /* adjust the position of the submit button if needed */
 .wrapper button[type="submit"] {
   margin-top: 20px; /* Add some space between the last input field and the button */
 }
