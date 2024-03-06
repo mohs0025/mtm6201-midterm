@@ -6,12 +6,10 @@
   /* it was wrong-don't use color here, it will add space to header */
 
   /* add font from google.font.com */
-  font-family: "Merriweather", serif;box sizing for contact page
-   
-  /* add font from google.font.com */
-  box-sizing: border-box;
-  
+  font-family: "Merriweather", serif;
 
+  /* box sizing for contact page */ 
+  box-sizing: border-box;
 }
 
 /* set image for header */
@@ -102,9 +100,9 @@ transition: 1s;
 }
 
 /* make h1 bigger */
-.bannertext h1{
+/* .bannertext h1{
   font-size: 40px;
-}
+} */
 
 /* banner text */
 .bannertext p{
@@ -113,6 +111,10 @@ transition: 1s;
    margin-bottom: 40px;
    /* margin-left: 0px;
    margin-right: 0px; */
+
+   /* add delay for animation */
+   animation-delay: 0.5s;
+
 }
 
 /* work on btn=size, box, corner, color, transparent */
@@ -131,6 +133,7 @@ transition: 1s;
   border-radius: 25px; 
   cursor: pointer;
 }
+
 
 
 /* add hover setting btn and I am really tired :(- change color and background color*/
@@ -166,7 +169,8 @@ nav .fa{
     width: 0;
   }
   
-  .bannertext h1{font-size: 20px}
+  
+  .bannertext h1, .call h1{font-size: 20px}
   .nav-pages ul li{display: block}
   
   /* add icons */
@@ -241,7 +245,24 @@ nav .fa{
     /*adjust the width as needed */
     width: 120px;  
   }  
+
+  /* adjust font size and padding of the button */
+    .wrapper button.call-btn {
+      font-size: 14px; /* Adjust the font size as needed */
+      padding: 10px 20px; /* Adjust the padding as needed */
+      width: auto; /* Allow the button to adjust its width based on content */
+    }
+  
+  /* center the button horizontally */
+    .wrapper button.call-btn {
+      display: block;
+      margin: 0; /* Center the button horizontally */
+    }
 }
+
+
+
+
 
 /* ---------------------------------------------- */
 /* CSS for positioning the overlay image */
@@ -319,7 +340,7 @@ nav .fa{
   }
 
 }
-
+/* I add it becaouse of "one-image"  */
 .main {
   display: flex;
   flex-direction: column;
@@ -355,9 +376,9 @@ nav .fa{
     top: 0; /* Ensure top position is 0 */
   }
 
-  /* set the size of middle image */
+  /* set the size of middle image -same as "our cakes" size*/
 .one-center img{
-  width: 60%;
+  width: 90%;
 }
 }
 
@@ -387,6 +408,14 @@ nav .fa{
   padding-bottom: 20px;
   padding-top: 10px;
 }
+
+/* set the color of h1 in banners-advertisment */
+
+.whiteh1{
+color: gold;
+padding-top: 30px;
+}
+
 
 .row{
   width: 90%;
@@ -524,12 +553,7 @@ nav .fa{
   background-image: linear-gradient(rgba(1, 3, 14, 0.7), rgba(17, 23, 52, 0.7)), url(../images/banner-small.jpg);
 }
 
-.call h1{
-  color: white;
-  /* add space with btn */
-  margin-bottom: 40px;
-  padding: 0;
-}
+
 
 /* add margin from left and right for advertisment */
 .call h1,
@@ -553,57 +577,145 @@ nav .fa{
 
 /* ---------------------------------------------------------- */
 /* setting Contact page */
-
-form input[type="text"],form input[type="email"],
-form textarea {
-width: 80%; /* Set the width to expand the form boxes to the full width of their container */
-
+.f-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  /* verticall-center */
+  align-items: center; 
+  flex-wrap: wrap;
+  /* z-index: 1;  */
 }
 
-
-form input[type="text"],form input[type="email"]
-{
-height: 80%;
+.contact-box {
+  max-width: 860px;
+  /* contact box takes full width */
+  width: 100%; 
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  text-align: center;
+  /* remove background color */
+  background-color: transparent; 
+  /* box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.19); */
+  border: 2px solid gold; 
 }
 
-form textarea {
-  height: 8em;
-  }
-
-  
-form button[type="submit"] {
-  margin-top: 20px; /* Adjust the value as desired */
-  padding:10px; /* Make button biger */
-  }
-
-  .wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* adjust the width*/
-    width: 80%; 
-    /* limit the maximum width of the forms */
-    max-width: 600px; 
-    padding: 20px;
-    /* add a semi-transparent background */
-    /* background-color: rgba(255, 255, 255, 0.8);  */
-    border-radius: 10px; /* Add some border radius for rounded corners */
-    color: white;
-    
-  }
-
-  /* adjust the position of the submit button if needed */
-.wrapper button[type="submit"] {
-  margin-top: 20px; /* Add some space between the last input field and the button */
+.left iframe {
+  padding: 10px 10px;
+  width: 100%;
+  height: 100%;
 }
 
-/* Ensure that the forms container stays on top of the background image */
-.header.contactp {
+.right {
+  padding: 25px 40px;
+}
+
+h2 {
   position: relative;
+  padding: 0 0 10px;
+  margin-bottom: 10px;
+  color: white;
 }
 
-/* Remove the margin from the body to prevent unwanted spacing */
-body.about-page {
-  margin: 0;
+h2::after {
+  content: "";
+  background-color: gold;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  height: 4px;
+  width: 50px;
+  border-radius: 2px;
 }
+
+.field {
+  width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0);
+  outline: none;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  margin-bottom: 22px;
+  transition: 0.3s;
+}
+
+.field:hover {
+  background-color: gold;
+  color: black;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+.call-btn {
+  background: gold;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: brown;
+}
+
+.field:focus {
+  border: 2px solid gold;
+  background: gray;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 700px) {
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+
+  .left iframe {
+    padding: 0;
+  }
+
+  .f-container {
+    padding: 0 20px; /* Adjust padding for smaller screens */
+  }
+}
+
+
+
+
+/* ------------------add animations to banner image---------------------- */
+.animation{
+  /* make invisible */
+  opacity: 0;
+  /* move down=Y */
+  transform: translateY(40px);
+  animation: moveup 0.5s linear forwards;
+  transition: opacity 0.5s, transform 0.5s
+}
+
+/* add keyframes for move up */
+@keyframes moveup{
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }  
+}
+
+  /* set delay: adjust previous codes */
+
+   /* add delay for animation for banner btn */
+   .play-btn, .app-btn {
+    animation-delay: 1s;
+   }
+
+   /* (It works but it is useless I think) */
+   /* then add animation for middle image */
+
+   
+   

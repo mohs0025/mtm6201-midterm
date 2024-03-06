@@ -21,3 +21,194 @@
   animation: flashy 0.5s infinite alternate; /* Apply the flashy animation */
 }
 
+/* --------------------------------------------------
+add animation  */
+.one-center::before, .one-center::after{
+  /* make sure bakground overlapp the image */
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+ /* change the position, bcz one-center was reletive */
+ position: absolute;
+
+ /* background: gray; */
+ /* fix the size of gray background */
+ height: 100%;
+ width: 60%;
+ margin: auto;
+ /* be empty form everything */
+ content: "";
+}
+
+.one-center::before{
+ content: "\f04b";
+ font-family: "font Awesome 5 Free";
+ font-weight: 900;
+ /* light gold */
+ background: gold;
+ display: grid;
+ place-items: center;
+ z-index: 10;
+}
+
+.one-center::after{
+ background: white;
+ /* be infront */
+ z-index: 1;
+ /* add animation for pulse for too slow minisecond, add infinit to keep playing */
+ animation: pulse 500ms infinite;
+ }
+
+ @keyframes pulse{
+   0%{
+     transform: scale(1);
+   }
+
+   100%{
+     transform: scale(1.1);
+   }
+ }
+
+
+
+ /* ---------------------------------------------------------- */
+/* setting Contact page */
+
+form input[type="text"],form input[type="email"],
+form textarea {
+width: 80%; /* Set the width to expand the form boxes to the full width of their container */
+
+}
+
+
+form input[type="text"],form input[type="email"]
+{
+height: 80%;
+}
+
+form textarea {
+  height: 8em;
+  }
+
+/* adjust btn*/  
+form button[type="submit"] {
+  margin-top: 20px; 
+  /* make button biger */
+  padding:10px; 
+  }
+
+  .wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* adjust the width*/
+    width: 80%; 
+    /* limit the maximum width of the forms */
+    max-width: 600px; 
+    padding: 20px;
+    /* add a semi-transparent background */
+    /* background-color: rgba(255, 255, 255, 0.8);  */
+
+    /* add rounded corners */
+    border-radius: 10px; 
+    color: white;
+    
+  }
+
+  /* adjust position of submit button */
+.wrapper button[type="submit"] {
+  /* add space between last input field and button */
+  margin-top: 20px; 
+}
+
+/* make the forms things stay on top of the background image */
+.header.contactp {
+  position: relative;
+}
+
+/* remove margin from body for remove unwanted spacing */
+body.about-page {
+  margin: 0;
+}
+
+
+
+
+/* ////////////////////////////////// */
+
+
+
+
+
+<!-- writing forms code -->
+<div class="wrapper">
+    <form>
+        <p>Your Name:</p>
+        <label for="name"></label>
+        <input type="text" id="name" name="name" required>
+  
+        <p>Your Email</p>
+        <label for="email"></label>
+        <input type="email" id="email" name="email" required>
+  
+        <p>Your Message:</p>
+        <label for="message"></label>
+        <textarea id="message" name="message" required>Write Your Message</textarea>
+
+        <p class="large-font">would you like to visit the starfish?</p>
+        
+        <label for="yes">Yes</label>
+        <input type="radio" id="yes" name="visitstarfish">
+        <label for="no">No</label>
+        <input type="radio" id="no" name="visitstarfish">
+        <label for="maybe">Maybe</label>
+        <input type="radio" id="maybe" name="visitstarfish">
+
+        <div>
+            <!-- add same btn class as others -->
+            <button class="call-btn" type="submit">SEND</button>
+        </div>
+    </form>
+    </div>
+
+<!-- <div class="contact-forms">
+    <div class="left"></div>
+    <div class="right">
+        <h2>Contact us</h2>
+        <input type="text" class="field" placeholder="Your Name"> 
+        
+        <input type="email" class="field" placeholder="Your Email">
+        
+        <input type="text" class="field" placeholder="Your Phone"> 
+
+        <textarea class="field" placeholder="Message"></textarea>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+<!-- add javascp for that Hell's burger icon :( -->
+<script>
+    var navpages = document.getElementById("navpages");
+    function OpenSecret(){
+        navpages.style.right = "0";
+    }
+
+    function SecretPage(){
+        navpages.style.right = "-200px";
+    }
+</script>
+
+
+
+</body>
+
+
+</html>
