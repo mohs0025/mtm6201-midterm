@@ -22,11 +22,11 @@
 
 
 <body>
-<header>
+<header role="banner">
     <section class="header">
-        <nav>
+        <nav role="navigation">
             <!-- add logo -->
-            <a href="index.html"><img src="images/arm.png" alt=""></a>
+            <a href="index.html"><img src="images/arm.png" alt="The Noon Logo"></a>
             <!-- add nav pages - I add id for script section -->
             <div class="nav-pages" id="navpages">
                 <!-- closing icon, make it disappear -->
@@ -61,13 +61,15 @@
     </section>
 
 </header>
-<main class="main">
+<main role="main" class="main">
     
 <!-- --------------- middle image------------- -->
 
     <div class="one-center">     
-        <img src="images/nature_inspired.jpg">   
+        <img src="images/nature_inspired.jpg" class="center-image" alt="A three-story wedding cake filled with walnuts and vanilla">   
     </div>
+
+    
 <!-- ---------------add line------------- -->
     <div class="line"></div>
 
@@ -171,21 +173,20 @@
     </script>
 </main>
 
-<footer>
+<footer role="contentinfo">
     <section class="footer">
         <!-- logo and h4 together -->
         <div class="logo-and-title">
-            <a href="index.html"><img src="images/arm.png" alt=""></a>
+            <a href="index.html"><img src="images/arm.png" alt="The Noon Logo"></a>
             <h4>The noon</h4>
         </div>
         
         <!-- icons in the middle -->
         <div class="icons">
             <!-- + add link to icons (first a, then put i in it) -->
-            <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
-            
+            <a href="https://www.facebook.com" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
             <!-- <i class="fab fa-linkedin"></i> -->
         </div>
         <!-- text aligned to the right -->
@@ -194,7 +195,7 @@
         </div>
     </section>
 </footer>
-   </main>
+   
 </body>
 
 

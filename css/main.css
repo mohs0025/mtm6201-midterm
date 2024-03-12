@@ -156,7 +156,7 @@ nav .fa{
 /* set for media for less 700px*/
   /*1- font title -2- set nav list*/
 
-@media(max-width: 700px){
+  @media screen and (max-width: 700px){
   /* fix logo size */
   /* add footer image too */
   nav img, .footer img{
@@ -242,8 +242,9 @@ nav .fa{
     margin-right: auto;
     /* center horizontally */
     margin-left: auto;
-    /*adjust the width as needed */
-    width: 120px;  
+    /*adjust the width*/
+    /* width: 120px;   */
+    width: 50%; 
   }  
 
   /* adjust font size and padding of the button */
@@ -328,7 +329,7 @@ color: black;
 
 
 /* set for media for less 700px*/
-@media(max-width: 700px){
+@media screen and (max-width: 700px){
   .footer{
     /* display: block; */
     flex-direction: column;
@@ -372,7 +373,7 @@ color: black;
 }
 
 /* small screens-middle image */
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .one-center {
     position: static; /* Reset position to default */
     margin-top: 50px; /* Add margin before the image */
@@ -397,7 +398,7 @@ color: black;
 }
 
 /* small screens, full width */
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .line {
     width: 100%; /* Full width of the screen */
   }
@@ -450,6 +451,16 @@ padding-top: 30px;
   transform: scale(1.25);
 }
 
+/* add scale to one image too */
+.one-center img{
+  /* width: 100%;
+  height: 100%; */
+  object-fit: cover;
+  transition: 0.3s;
+}
+.one-center img:hover {
+  transform: scale(1.25);
+}
 
 /* style the content wrapper */
 . row .contentWrapper{
@@ -509,8 +520,9 @@ padding-top: 30px;
 
 
 /* set advertisment for media for less 700px-@media*/
+/* @media(max-width: 700px) */
 
-  @media(max-width: 700px){
+@media screen and (max-width: 700px){
     .row{
       grid-template-columns: 1fr;
       /* grid-gap: 50px; */
@@ -566,34 +578,31 @@ padding-top: 30px;
   margin-right: 50px;
 }
 
+/* ------------------------CONTACT---------------------------------- */
 
 
-/* ---------------------------------------------------------- */
-  /* Remove background image for about and contact pages and design it again */
-  .header.others {
-    background-image: none;
-    background-color: rgb(39, 39, 54);
-    
-     min-height: 10vh;
-  }
-
-  
-
-/* ---------------------------------------------------------- */
-/* setting Contact page */
+  /* setting Contact page */
 .f-container {
   position: absolute;
-  top: 0;
-  left: 0;
-  /* width: 100%;
-  height: 100%; */
-  display: flex;
+  /* place the container at the vertical-horizontal center */
+  top: 50%;
+  left: 50%;
+  /* move the container up and left by 50% of its own dimensions */
+  transform: translate(-50%, -50%);
+  width: 90%;
+  /* add max width but I am not sure about that */
+  max-width: 860px;
+/* margin-top: 250px;
+  /* width: 100%; */
+  /* height: 100%; */
+  display: flex; */
   justify-content: center;
   /* verticall-center */
   align-items: center; 
   flex-wrap: wrap;
   /* z-index: 1;  */
 }
+
 
 .contact-box {
   max-width: 860px;
@@ -623,7 +632,7 @@ padding-top: 30px;
 h2 {
   position: relative;
   padding: 0 0 10px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
   color: white;
 }
 
@@ -658,13 +667,13 @@ textarea {
   min-height: 150px;
 }
 
-.call-btn {
+/* .call-btn {
   background: gold;
   color: white;
   font-size: 1.1rem;
   cursor: pointer;
   transition: 0.3s;
-}
+} */
 
 .btn:hover {
   background: brown;
@@ -676,7 +685,7 @@ textarea {
 }
 
 /* Media query for smaller screens */
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .contact-box {
     grid-template-columns: 1fr;
   }
@@ -688,7 +697,13 @@ textarea {
   .f-container {
     padding: 0 20px; /* Adjust padding for smaller screens */
   }
+
+  /* it is better to hid the map */
+  .left {
+    display: none;
+  }
 }
+
 
 
 
@@ -722,4 +737,119 @@ textarea {
    /* then add animation for middle image */
 
    
-   
+
+/* -----------------------------ABOUT-------------------------------------------- */
+  /* Remove background image for about and contact pages and design it again */
+  /* .header.others {
+    background-image: none;
+    background-color: rgb(39, 39, 54);
+    
+     min-height: 10vh;
+  } */
+
+/* fix width for contact part */
+  .team-section{
+    width: 100%;
+  }
+
+  .team-section .t-container{
+    width: 80%;
+    margin: auto;
+  }
+
+  .team-section .t-container .t-row{
+    width: 60%;
+    margin: auto;
+  }
+
+  
+  .team-section .t-container .t-row .title{
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .team-section .t-container .t-row .title h1{
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    /* color: brown; */
+  }
+
+  .team-section .t-container .t-row .title p{
+    font-size: 18px;
+    margin: 30px 0px;
+  }
+
+  .team-section .t-container .team-card{
+    width: 100%;
+    display: grid;
+    /* creat 3 column same size */
+    grid-template-columns: repeat(3, 1fr);
+    /* add space */
+    grid-gap: 50px;
+    margin-top: 50px;
+  }
+
+  
+  .team-section .t-container .team-card .card{
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  .team-section .t-container .team-card .card:hover{
+    background-color: blueviolet;
+    transition: 0.3s;
+  }
+
+  .team-section .t-container .team-card .card .image-section img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid gold;
+  }
+
+  .team-section .t-container .team-card .card .content{
+    width: 100%;
+    text-align: center;
+  }
+
+  .team-section .t-container .team-card .card .content h3{
+    font-size: 27px;
+    margin-top: 10px;
+    letter-spacing: 1.5px;
+    color: chartreuse;
+  }
+
+
+  
+  .team-section .t-container .team-card .card .content h4{
+    font-size: 17px;
+    margin-top: 10px;
+    line-height: 1.5;
+    color:gray;
+  }
+
+  
+  .team-section .t-container .team-card .card .content p{
+    font-size: 15px;
+    margin: 10px 0px;
+    line-height: 1.5;
+    
+  }
+
+  @media screen and (max-width: 700px){
+    .team-section .t-container .team-card{
+      /* creat 2 column same size */
+      /* grid-template-columns: repeat(2, 1fr); */
+      /* add space */
+      grid-template-columns: 1fr;
+      
+    }
+  
+  }

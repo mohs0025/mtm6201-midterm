@@ -17,12 +17,12 @@
 
 
 <body>
-    <header>
+    <header role="banner">
         <!-- add another class for about and contact pages-->        
         <section class="header others">
-            <nav>
+            <nav role="navigation">
                 <!-- add logo -->
-                <a href="index.html"><img src="images/arm.png" alt=""></a>
+                <a href="index.html"><img src="images/arm.png" alt="The Noon Logo"></a>
                 <!-- add nav pages - I add id for script section -->
                 <div class="nav-pages" id="navpages">
                     <!-- closing icon, make it disappear -->
@@ -44,7 +44,67 @@
     </header>
 
 
-<main>
+    <main role="main">
+
+        <!-- creat a div for whole sention -->
+        <div class="team-section">
+
+            <!-- creat divs for each of them -->
+            <div class="t-container">
+
+                <div class="t-row">
+                    <!-- div for text -->
+                    <div class="title">
+                        <h1>Our Team</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque iusto accusamus reiciendis cumque architecto est iste eos ipsum adipisci non amet quas, unde nisi? Ad nisi nulla facere aperiam suscipit?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+
+                    <div class="card">
+                        <!-- for image -->
+                        <div class="image-section">
+                            <img src="images/sara-Final.jpg" alt="">
+                        </div>
+
+                        <div class="content">
+                            <h3>Sara</h3>
+                            <h4>Designer</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores nemo id unde eum. Blanditiis iure pariatur provident, odit ducimus aperiam esse fugiat doloremque reiciendis quas, rem eaque dicta facilis eum.</p>
+                        </div>
+
+                         <!-- for 3 images -->
+                        <div class="card">
+                            <div class="image-section">
+                                <img src="images/Anita-Final.jpg" alt="">
+                            </div>
+    
+                            <div class="content">
+                                <h3>Anita</h3>
+                                <h4>Designer</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores nemo id unde eum. Blanditiis iure pariatur provident, odit ducimus aperiam esse fugiat doloremque reiciendis quas, rem eaque dicta facilis eum.</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="image-section">
+                                    <img src="images/sara-Final.jpg" alt="">
+                                </div>
+        
+                                <div class="content">
+                                    <h3>MZ</h3>
+                                    <h4>Web Developer</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores nemo id unde eum. Blanditiis iure pariatur provident, odit ducimus aperiam esse fugiat doloremque reiciendis quas, rem eaque dicta facilis eum.</p>
+                                </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        
 
 
 
@@ -54,20 +114,42 @@
 
 
 
-<!-- add javascp for that Hell's burger icon :( -->
-    <script>
-        var navpages = document.getElementById("navpages");
-        function OpenSecret(){
-            navpages.style.right = "0";
-        }
+    <!-- add javascp for that Hell's burger icon :( -->
+        <script>
+            var navpages = document.getElementById("navpages");
+            function OpenSecret(){
+                navpages.style.right = "0";
+            }
 
-        function SecretPage(){
-            navpages.style.right = "-200px";
-        }
-    </script>
-</main>
+            function SecretPage(){
+                navpages.style.right = "-200px";
+            }
+        </script>
+    </main>
 
-   
+    <footer role="contentinfo">
+        <section class="footer">
+            <!-- logo and h4 together -->
+            <div class="logo-and-title">
+                <a href="index.html"><img src="images/arm.png" alt="The Noon Logo"></a>
+                <h4>The noon</h4>
+            </div>
+            
+            <!-- icons in the middle -->
+            <div class="icons">
+                <!-- + add link to icons (first a, then put i in it) -->
+                <a href="https://www.facebook.com" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <!-- <i class="fab fa-linkedin"></i> -->
+            </div>
+            <!-- text aligned to the right -->
+            <div class="text">
+                <p><small>Copywright 2024, <strong>The Noon.com</strong></small></p>
+            </div>
+        </section>
+    </footer>
+       
 </body>
 
 
