@@ -129,7 +129,10 @@ transition: 1s;
 
    /* add delay for animation */
    animation-delay: 0.5s;
-
+}
+/* make h1 bigger */
+.bannertext h1{
+  font-size:x-large;
 }
 
 /* work on btn=size, box, corner, color, transparent */
@@ -168,7 +171,7 @@ nav .fa{
 
 
 
-/* set for media for less 700px*/
+/* set for media for less 800px*/
   /*1- font title -2- set nav list*/
 
   @media screen and (max-width: 800px){
@@ -184,14 +187,16 @@ nav .fa{
     width: 0;
   }
   
-  
-  .bannertext h1, .call h1{font-size: 20px}
+      /* set font size as percentage - viewport width */
+  /* .bannertext h1, .call h1{font-size: 4vw} */
   .nav-pages ul li{display: block}
   
   /* add icons */
   nav .fa{
     display: block;
     font-size: 20px;
+    /* set font size as percentage - viewport width */
+    /* font-size: 3vw; */
     /* color: gold; */
     color: white;
     cursor: pointer;
@@ -353,7 +358,7 @@ color: black;
 }
 
 
-/* set for media for less 700px*/
+/* set for media for less 800px*/
 @media screen and (max-width: 800px){
   .footer{
     /* display: block; */
@@ -385,6 +390,8 @@ color: black;
   /* margin: 0 2%; */
   position: relative;
   top:-100px;
+
+  
   
   /* background-color: blueviolet; */
   /* text-align: left; */
@@ -396,6 +403,9 @@ color: black;
 .one-center img{
   width: 60%;
 }
+
+
+
 
 /* small screens-middle image */
 @media screen and (max-width: 800px) {
@@ -549,12 +559,52 @@ padding-top: 30px;
 
 @media screen and (max-width: 800px){
     .row{
-      grid-template-columns: 1fr;
+      /* grid-template-columns: 1fr; */
+      display: flex;
+      flex-direction: column;
       /* grid-gap: 50px; */
       width: 90%;
       margin: 0 auto;
-
+      /* center items */
+      align-items: center;
     }
+
+    /* Change the order of imageWrapper and contentWrapper */
+    /* .imageWrapper {
+      order: 2; 
+    }
+
+    .contentWrapper {
+      order: 1; 
+      text-align: center;
+    } */
+
+    /* change the order of even-indexed children */
+
+    .row > div:nth-child(odd) {
+      order: 2; 
+    }
+  
+    .row > div:nth-child(even) {
+      order: 1; 
+      /* center inside contentWrapper */
+      text-align: center; 
+    }
+
+    /* repeating same things - but it should be reverse */
+    .reverse > div:nth-child(odd) {
+      order: 1; 
+      text-align: center; 
+    }
+  
+    .reverse > div:nth-child(even) {
+      order: 2; /* Change the order of even-indexed children */
+    }
+
+
+    
+
+
     
     /* style the content wrapper */
     . row .contentWrapper{
