@@ -170,6 +170,19 @@ nav .fa{
 }
 
 
+  /* set the color of h1 in banners-advertisment */
+  .whiteh1{
+    color: gold;
+    padding-top: 30px;
+    }
+  
+    .call p{
+      color: white;
+      margin-bottom: 40px;
+      line-height: 1.8rem;
+    }
+  
+  
 
 /* set for media for less 800px*/
   /*1- font title -2- set nav list*/
@@ -284,11 +297,7 @@ nav .fa{
 
 
 
-
-/* ---------------------------------------------- */
-/* CSS for positioning the overlay image */
-
-
+/* ----------------FOOTER-------------------------- */
 .footer {
   /* put everything in one line */
   padding: 0px 25px;
@@ -304,7 +313,6 @@ nav .fa{
   width: 60px; 
   /* space between logo and h4 */
   margin-right: 10px; 
-
 }
 
 .footer .icons {
@@ -383,16 +391,13 @@ color: black;
   justify-content: center;
 }
 
-/* -------------------------------------- */
-/* one-image in middle */
+/* ------------------One-image in middle-------------------- */
+
 .one-center {
   text-align: center; /* Center the content inside the div */
   /* margin: 0 2%; */
   position: relative;
   top:-100px;
-
-  
-  
   /* background-color: blueviolet; */
   /* text-align: left; */
   /* box-shadow: 1px 1 px 20px 1px red; */
@@ -405,80 +410,75 @@ color: black;
 }
 
 
-
-
 /* small screens-middle image */
 @media screen and (max-width: 800px) {
   .one-center {
-    position: static; /* Reset position to default */
-    margin-top: 50px; /* Add margin before the image */
-    margin-bottom: 50px; /* Add margin after the image */
-    top: 0; /* Ensure top position is 0 */
+    /* reset position to default */
+    position: static; 
+    /* add margin before the image */
+    margin-top: 50px; 
+    /* add margin after the image */
+    margin-bottom: 50px; 
+     /* make sure top position is 0 */
+    top: 0;
   }
 
   /* set the size of middle image -same as "our cakes" size*/
-.one-center img{
-  width: 90%;
-}
-}
+  .one-center img{
+    width: 90%;
+  }
+  }
 
 
-/* set black line */
-.line {
-  height: 2px; /* Height of the line */
-  background-color: black; /* Color of the line */
-  margin-top: 20px; /* Adjust margin as needed */
-  width: 50%; /* Half width of the screen */
-  margin: 20px auto; /* Center the line horizontally */
-}
+  /* set black line */
+  .line {
+    /* height- line */
+    height: 2px; 
+    /* color line */
+    background-color: black; 
+    /* adjust margin */
+    margin-top: 20px; 
+    /* half scren width */
+    width: 50%; 
+    /* center the line horizontally */
+    margin: 20px auto; 
+  }
 
 /* small screens, full width */
 @media screen and (max-width: 800px) {
+  /* full width screen */
   .line {
-    width: 100%; /* Full width of the screen */
+    width: 100%; 
   }
 }
 
-/* ------------------------------------------ */
-/* <!-- products part --> */
- h1{
-  font-size: 40px;
-  font-weight: 700px;
-  color: rgb(97, 95, 95);
-  padding-bottom: 20px;
-  padding-top: 10px;
-}
-
-/* set the color of h1 in banners-advertisment */
-
-.whiteh1{
-color: gold;
-padding-top: 30px;
-}
-
-.call p{
-  color: white;
-  margin-bottom: 40px;
-  line-height: 1.8rem;
-}
 
 
-.row{
-  width: 90%;
-  max-width: 1170px;
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(2, 1fr);
-  /* add space */
-  grid-gap: 50px;
-  overflow-x: hidden;
-  padding: 5rem 0;
-  margin: 0 auto;
-}
+  /* --------------------Products part---------------------- */
+  h1{
+    font-size: 40px;
+    font-weight: 700px;
+    color: rgb(97, 95, 95);
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
 
-.row .imageWrapper{
-  overflow: hidden;
-}
+  .row{
+    width: 90%;
+    max-width: 1170px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    /* add space */
+    grid-gap: 50px;
+    overflow-x: hidden;
+    padding: 5rem 0;
+    margin: 0 auto;
+  }
+
+  .row .imageWrapper{
+    overflow: hidden;
+  }
 
 /* change scale of picture by hovering */
 .row .imageWrapper img{
@@ -737,12 +737,24 @@ h2::after {
   content: "";
   background-color: gold;
   position: absolute;
-  left: 50%;
+  /* left: 50%; */
+  left: 0;
+  /* right: 0; */
   bottom: 0;
-  transform: translate(-50%);
   height: 4px;
-  width: 50px;
+  width: 70%;
   border-radius: 2px;
+  /* align-self:baseline; */
+}
+
+/* set for small screen */
+@media screen and (max-width: 800px){
+  h2::after {
+    left: 50%;
+    right: 0;
+    transform: translate(-50%);
+    width: 50%;
+  }
 }
 
 .field {
