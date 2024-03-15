@@ -456,6 +456,12 @@ color: gold;
 padding-top: 30px;
 }
 
+.call p{
+  color: white;
+  margin-bottom: 40px;
+  line-height: 1.8rem;
+}
+
 
 .row{
   width: 90%;
