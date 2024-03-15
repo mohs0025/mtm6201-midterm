@@ -21,6 +21,7 @@
 - All images on the site are optimized for web use
 - Comments in the HTML and CSS
 - Site has 3 html pages (Home, About Us, Contact)
+- All buttons are clickable and have links
 
 <!-- 
 https://www.markdownguide.org/cheat-sheet/

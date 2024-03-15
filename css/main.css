@@ -733,7 +733,7 @@ h2 {
   color: white;
 }
 
-h2::after {
+.homestyle h2::after {
   content: "";
   background-color: gold;
   position: absolute;
@@ -747,9 +747,25 @@ h2::after {
   /* align-self:baseline; */
 }
 
+/* underline for contact page h2 */
+.contactstyle h2::after{
+  content: "";
+  background-color: gold;
+  position: absolute;
+  /* left: 50%; */
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  border-radius: 2px;
+  transform: translate(-50%);
+  width: 50%;
+  /* align-self:baseline; */
+}
+
 /* set for small screen */
 @media screen and (max-width: 800px){
-  h2::after {
+  .homestyle h2::after {
     left: 50%;
     right: 0;
     transform: translate(-50%);
