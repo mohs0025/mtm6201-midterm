@@ -1,6 +1,6 @@
 # mtm6201-midterm
 
-This is my mid-term project
+#H1 This is my mid-term project
 I worked on following fetures:
 - Animating a banner image
 1. The Site template is belogns to "Marvis Ighedosa" © 2021 Marvis Ighedosa.
