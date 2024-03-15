@@ -47,15 +47,12 @@
         <div class="bannertext">
             <p class="animation">Welcome to The Noon</p>
             <h1 class="whiteh1 animation">Crafting Memories with Delectable Delights</h1>
-            <p class="animation">Order your delicious cake with our app</p>
+            <p class="animation">Order your delicious cake now</p>
             <!-- add Buttons -->
             <!-- <a href="play-btn">Playstore</a>this is wrong! -->
-            <a href="" class="play-btn animation">Playstore</a>
+            <a href="contact.html" class="play-btn animation">Contact</a>
 
-            <a href="" class="app-btn animation">App store</a>
-
-
-
+            <!-- <a href="" class="app-btn animation">App store</a> -->
         </div>
     </section>
 
@@ -75,27 +72,49 @@
             <div class="about-row">
                 <!-- add 3 column -->
                 <div class="noon-col">
-                    <img src="images/arm-about.png" alt="the noon logo">
+                <!-------------- optimize pictures / same picture /different resolution--------->
+                <!-- I choose 480-1440px since pics are small -->
+
+                    <img 
+                        srcset="images/arm-about-derivatives/arm-about-480_x_480.png, images/arm-about-derivatives/arm-about-960_x_960.png 2x, images/arm-about-derivatives/arm-about-1440_x_1440.png 3x" 
+                            
+                        src="images/arm-about-derivatives/arm-about-960_x_960.png"
+                        alt="the Noon logo">
+                
+                    <!-- src="images/arm-about.png" alt="the noon logo"> -->
+                    
 
                     <h3>The Noon</h3>
                     <p>"The Noon" is renowned for its delectable cakes, perfect for any occasion. Led by Anita and MZ, the team takes pride in crafting unforgettable confections that leave a lasting impression on every customer.</p>
                 </div>
 
                 <div class="noon-col">
-                    <img src="images/Anita-Final.jpg" alt="picture of Anita our manager">
+                    
+                    <!-- <img src="images/Anita-Final-derivatives/Anita-Final-2400_x_2400.jpg" alt="picture of Anita our manager"> -->
+                    <img 
+                        srcset="images/Anita-Final-derivatives/Anita-Final-480_x_480.jpg, images/Anita-Final-derivatives/Anita-Final-960_x_960.jpg 2x, images/Anita-Final-derivatives/Anita-Final-1440_x_1440.jpg 3x" 
+                        
+                        src="images/Anita-Final-derivatives/Anita-Final-960_x_960.jpg"
+                        alt="picture of Anita our manager">
+                   
                     <h3><strong>Anita</strong>, the Manager</h3>
                     <p>Anita manages "The Noon" pastry shop with finesse, ensuring smooth operations and exceptional customer service. Her warmth and attention to detail make "The Noon" a favorite among pastry lovers.</p>
                 </div>
 
                 <div class="noon-col">
-                    <img src="images/MZ.jpg" alt="picture of MZ our pastry chef">
+                    <img 
+                    srcset="images/MZ-derivatives/MZ-480_x_480.jpg, images/MZ-derivatives/MZ-960_x_960.jpg 2x, images/MZ-derivatives/MZ-1440_x_1440.jpg 3x" 
+                        
+                    src="images/MZ-derivatives/MZ-960_x_960.jpg" 
+                    alt="picture of MZ our pastry chef">
+
                     <h3>MZ, the Pastry Chef</h3>
                     <p>MZ, the skilled pastry chef at "The Noon," infuses creativity into every dessert she creates. With her innovative approach and dedication to quality, MZ's treats are both visually stunning and delicious.</p>
                 </div>
 
             </div>
 
-
+           
 
         </section>
 
@@ -124,7 +143,9 @@
         <section class="footer">
             <!-- logo and h4 together -->
             <div class="logo-and-title">
-                <a href="index.html"><img src="images/arm.png" alt="The Noon Logo"></a>
+                <a href="index.html">
+                    <img src="images/arm.png" alt="The Noon Logo"></a>
+                    
                 <h4>The noon</h4>
             </div>
             
