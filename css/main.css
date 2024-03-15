@@ -865,10 +865,18 @@ textarea {
   }
 
   /* set p to the left */
-  .discover{
+  /* .about-us .discover{
+    text-align: left;
+  } */
+
+  /* Center content on big screens */
+@media screen and (min-width: 800px) {
+  .about-us .discover{
     text-align: left;
   }
+}
 
+  
 /* style title */
  .about-us h1{
     font-size: 36px;
